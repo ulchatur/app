@@ -5,8 +5,8 @@ from datetime import datetime
 
 app = Flask(__name__)
 
-@app.route('/ui')
-def ui():
+@app.route('/')
+def home():
     return render_template('index.html')
 
 # MySQL Configuration - Azure environment variables se values uthao
