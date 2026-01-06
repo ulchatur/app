@@ -3,20 +3,11 @@ import pymysql
 import os
 import logging
 
-# --------------------------------------------------
-# Flask App
-# --------------------------------------------------
 app = Flask(__name__)
 
-# --------------------------------------------------
-# Logging (Azure Log Stream me dikhega)
-# --------------------------------------------------
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# --------------------------------------------------
-# MySQL Configuration (Azure App Settings se)
-# --------------------------------------------------
 DB_CONFIG = {
     "host": os.getenv("AZURE_MYSQL_HOST"),
     "user": os.getenv("AZURE_MYSQL_USER"),
@@ -67,7 +58,6 @@ def init_db():
     finally:
         connection.close()
 
-# 🔥 IMPORTANT: Azure Web App startup hook
 init_db()
 
 # --------------------------------------------------
