@@ -6,8 +6,16 @@ from datetime import datetime
 app = Flask(__name__)
 
 @app.route('/')
-def home():
+def ui_home():
     return render_template('index.html')
+
+
+@app.route('/health')
+def health():
+    return jsonify({
+        'status': 'running',
+        'message': 'Azure Flask App with MySQL is live!'
+    })
 
 # MySQL Configuration - Azure environment variables se values uthao
 DB_CONFIG = {
@@ -49,14 +57,6 @@ def init_db():
         finally:
             cursor.close()
             connection.close()
-
-@app.route('/')
-def home():
-    """Health check endpoint"""
-    return jsonify({
-        'status': 'running',
-        'message': 'Azure Flask App with MySQL is live! 🚀'
-    })
 
 @app.route('/users', methods=['GET'])
 def get_users():
