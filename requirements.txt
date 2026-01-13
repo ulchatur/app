@@ -1,3 +1,4 @@
+#required packages for the Flask web application
 Flask==2.3.3
 PyMySQL==1.1.0
 gunicorn==21.2.0
