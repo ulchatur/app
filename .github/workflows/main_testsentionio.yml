@@ -61,6 +61,7 @@ jobs:
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp
         with:
-          app-name: 'testsentionio'
+          app-name: 'ullas-test'
           slot-name: 'Production'
+
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2142601D3C114DE1AD4721057BC575F5 }}
