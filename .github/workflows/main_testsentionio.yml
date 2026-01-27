@@ -12,7 +12,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: Linux
     permissions:
       contents: read #This is required for actions/checkout
 
@@ -65,3 +65,4 @@ jobs:
           slot-name: 'Production'
 
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_2142601D3C114DE1AD4721057BC575F5 }}
+
