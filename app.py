@@ -20,7 +20,7 @@ DB_CONFIG = {
 }
 
 # --------------------------------------------------
-# DB Connection code
+# DB Connection code updated
 # --------------------------------------------------
 def get_db_connection():
     try:
