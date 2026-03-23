@@ -1,0 +1,5 @@
+name: Docker Build
+on: [push]
+jobs:
+  call-central:
+    uses: ulchatur/central/.github/workflows/docker-reusable.yml@main
